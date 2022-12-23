@@ -48,6 +48,12 @@ public class C04_BeforeClassAfterClass {
     public void test02(){
         System.out.println("Ikinci Test");
     }
+
+    @Test
+    @Ignore  //--> eger bir testi calistirmak istemezsek bu sekilde yazariz
+    public void test03(){
+        System.out.println("Ucuncu Test");
+    }
 }
 
 /*
@@ -59,6 +65,8 @@ Her testten sonra calisir
 Her testten once calisir
 Ikinci Test
 Her testten sonra calisir
+
+Test ignored.
 Butun testlerden sonra calisti
 
  */
