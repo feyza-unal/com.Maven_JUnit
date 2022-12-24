@@ -63,3 +63,14 @@ public class C07_Assertion {
         Assert.assertFalse(actualTitle.contains(expectedTitle));
     }
 }
+
+/*
+Eger test methodumuzda hicbir test yoksa, test calistiktan sonra hicbir problemle karsilasilmadigini raporlamak icin
+"test passed" yazisi cikar
+
+Eger testleri if ile yaparsak test failed olsa bile kodlar problemsiz calistigi icin kodun calismasi bittiginde
+ekranin sol alt kisminda "test passed" yazacaktir
+
+
+
+ */
