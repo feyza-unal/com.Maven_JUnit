@@ -80,7 +80,7 @@ public class C01_Dropdown {
         -select obj olustururum
         -select objesi ile istedigim secenegi secerim
 
-        Not: select obj olusturma nedenim, dropdownlarin Select classi ile olusturulmasi
+        Not: Select obj olusturma nedenim, dropdownlarin Select classi ile olusturulmasi
 
         3. Tum dropdown seceneklerini nasil print ederiz?
         -tum dropdown elementlerini getOptions() methodu ile listeye koyariz
