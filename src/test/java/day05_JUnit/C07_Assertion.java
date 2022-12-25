@@ -71,6 +71,4 @@ Eger test methodumuzda hicbir test yoksa, test calistiktan sonra hicbir probleml
 Eger testleri if ile yaparsak test failed olsa bile kodlar problemsiz calistigi icin kodun calismasi bittiginde
 ekranin sol alt kisminda "test passed" yazacaktir
 
-
-
  */
