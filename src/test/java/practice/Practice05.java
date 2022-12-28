@@ -21,8 +21,6 @@ public class Practice05 {
 //arama kutusuna  "Lord of the Rings" yazip, cikan sonuc sayisini yazdirin
 //arama kutusuna  "Kill Bill" yazip, cikan sonuc sayisini yazdirin
 //AfterClass ile kapatın
-
-
     static WebDriver driver;
     @BeforeClass
     public static void beforeClass() {
