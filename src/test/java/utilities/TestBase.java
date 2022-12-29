@@ -8,7 +8,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.time.Duration;
 
-public abstract class TestBase {
+public abstract class TestBase { //abstract yapmamizin sebebi bu sinifin objesini olusturmak istemiyoruz
+// amacimiz bu sinifi extend etmek ve icindeki methodlari kullanmak
 
 //  driver objesini olustur. --> driver public yada protected olmali (child classlarda gorulebilmeli)
     protected static WebDriver driver;
