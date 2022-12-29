@@ -1,4 +1,4 @@
-package practice;
+package practice.day01;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.Assert;
@@ -10,7 +10,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import java.time.Duration;
 import java.util.List;
 
-public class Practice04 {
+public class P04 {
     public static void main(String[] args) {
         WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();

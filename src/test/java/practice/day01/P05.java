@@ -1,4 +1,4 @@
-package practice;
+package practice.day01;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.After;
@@ -13,7 +13,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.time.Duration;
 
-public class Practice05 {
+public class P05 {
 //BeforeClass ile driver ı olusturun ve
 //Maximize edin, 15 sn bekletin
 //http://www.google.com adresine gidin
