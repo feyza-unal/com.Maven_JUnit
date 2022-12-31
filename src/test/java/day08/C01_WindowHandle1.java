@@ -35,11 +35,11 @@ public class C01_WindowHandle1 extends TestBase {
 //      Bunun icin driver.getWindowHandles() ile tum pencerelerin IDlerini alalim
         Set<String> allWindowHandles = driver.getWindowHandles();
         System.out.println(allWindowHandles);
-        for (String eachHandle : allWindowHandles){
+        for (String w : allWindowHandles){
 //           eger listedeki id window1'e esit degilse, otomatik olarak bir sonrakine esittir
 
-             if (!eachHandle.equals(window1Handle)){
-                 driver.switchTo().window(eachHandle); //burdaki eachHandle window2 handle'ina esittir
+             if (!w.equals(window1Handle)){
+                 driver.switchTo().window(w); //burdaki eachHandle window2 handle'ina esittir
              }
         }
 //      Bu noktada driver 2. pencerede
