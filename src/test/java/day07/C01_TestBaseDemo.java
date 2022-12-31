@@ -25,4 +25,5 @@ UTILITIES:
         String actualTitle = driver.getTitle();
         Assert.assertTrue(actualTitle.contains("Bootcamps"));
     }
+
 }
