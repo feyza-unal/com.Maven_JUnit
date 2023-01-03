@@ -11,7 +11,7 @@ import java.util.List;
 
 public class TestCase08 extends TestBase {
     @Test
-    public void test01() {
+    public void test01() throws InterruptedException {
 //      web sayfasına gidin. https://www.amazon.com/
         driver.get("https://www.amazon.com/");
 
@@ -25,6 +25,7 @@ public class TestCase08 extends TestBase {
 
 //       Sonra karşınıza çıkan ilk sonucun resmine tıklayın.
         driver.findElement(By.xpath("(//*[@class='s-image'])[1]")).click();
+        Thread.sleep(3000);
 
     }
 }
