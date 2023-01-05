@@ -18,14 +18,14 @@ public class C01_WindowHandle1 extends TestBase {
         String window1Handle = driver.getWindowHandle();
 
 //      Sayfadaki textin “Opening a new window” olduğunu doğrulayın.
-        String text = driver.findElement(By.xpath("//h3")).getText();
+        String actualtext = driver.findElement(By.xpath("//h3")).getText();
         String expectedText= "Opening a new window";
-        Assert.assertEquals(text,expectedText);
+        Assert.assertEquals(expectedText,actualtext);
 
 //      Sayfa başlığının(title) “The Internet” olduğunu doğrulayın.
-        String title = driver.getTitle();
+        String actualtitle = driver.getTitle();
         String expectedTitle= "The Internet";
-        Assert.assertEquals(title,expectedTitle);
+        Assert.assertEquals(expectedTitle,actualtitle);
 
 //      Click Here butonuna basın.
         driver.findElement(By.linkText("Click Here")).click();
