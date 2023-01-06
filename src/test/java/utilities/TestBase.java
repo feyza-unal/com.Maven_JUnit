@@ -19,7 +19,7 @@ public abstract class TestBase { //abstract yapmamizin sebebi bu sinifin objesin
     public void setUp() {
         WebDriverManager.chromedriver().setup();driver = new ChromeDriver();
         driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
     }
 
     @After
