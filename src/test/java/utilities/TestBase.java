@@ -24,6 +24,7 @@ public abstract class TestBase { //abstract yapmamizin sebebi bu sinifin objesin
 
     @After
     public void tearDown() {
+        waitFor(5);
         driver.quit();
     }
 
