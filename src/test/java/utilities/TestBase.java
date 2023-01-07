@@ -3,8 +3,11 @@ package utilities;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.After;
 import org.junit.Before;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
 
 import java.time.Duration;
 import java.util.ArrayList;
@@ -28,7 +31,7 @@ public abstract class TestBase { //abstract yapmamizin sebebi bu sinifin objesin
         driver.quit();
     }
 
-//------------------window handle pencere gecisi icin methodlar-----------------
+//------------------window handle pencere gecisi icin methodlar 1.-----------------
 //    MULTIPLE WINDOW
 //    1 parametre alir : Gecis Yapmak Istedigim sayfanin Title
 //    ORNEK:
@@ -45,7 +48,7 @@ public abstract class TestBase { //abstract yapmamizin sebebi bu sinifin objesin
         }
         driver.switchTo().window(origin);
     }
-//----------------------------------------------------------------
+//----------------------- 2. -----------------------------------------
 //     windowNumber sıfır (0)'dan başlıyor.
 //     index numarasini parametre olarak alir
 //     ve o indexli pencerece gecis yapar
@@ -59,13 +62,53 @@ public abstract class TestBase { //abstract yapmamizin sebebi bu sinifin objesin
  /*   HARD WAIT:
      @param : second
  */
-public static void waitFor(int seconds){
-    try {
-        Thread.sleep(seconds*1000);
-    } catch (InterruptedException e) {
-        e.printStackTrace();
+    public static void waitFor(int seconds){  // --> koda waitFor(saniye) yazmam yeterli
+        try {
+            Thread.sleep(seconds*1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
-}
-// --> koda waitFor(saniye) yazmam yeterli
-//----------------------------------------------------------------
+
+//--------------------------actions metodlari--------------------------------------
+
+    //    ACTIONS_RIGHT CLICK
+    public static void rightClickOnElementActions(WebElement element) {
+        Actions actions = new Actions(driver);
+        actions.contextClick(element).perform();
+    }
+    //ACTIONS_DOUBLE CLICK
+    public static void doubleClick(WebElement element) {
+        new Actions(driver).doubleClick(element).build().perform();
+    }
+    //    ACTIONS_HOVER_OVER
+    public static void hoverOverOnElementActions(WebElement element) {
+        new Actions(driver).moveToElement(element).perform();
+    }
+    //    ACTIONS_SCROLL_DOWN
+    public static void scrollDownActions() {
+        new Actions(driver).sendKeys(Keys.PAGE_DOWN).perform();
+    }
+    //    ACTIONS_SCROLL_UP
+    public static void scrollUpActions() {
+        new Actions(driver).sendKeys(Keys.PAGE_UP).perform();
+    }
+    //    ACTIONS_SCROLL_RIGHT
+    public static void scrollRightActions(){
+        new Actions(driver).sendKeys(Keys.ARROW_RIGHT).sendKeys(Keys.ARROW_RIGHT).perform();
+    }
+    //    ACTIONS_SCROLL_LEFT
+    public static void scrollLeftActions(){
+        new Actions(driver).sendKeys(Keys.ARROW_LEFT).sendKeys(Keys.ARROW_LEFT).perform();
+    }
+    //    ACTIONS_DRAG_AND_DROP
+    public static void dragAndDropActions(WebElement source, WebElement target) {
+        new Actions(driver).dragAndDrop(source,target).perform();
+    }
+    //    ACTIONS_DRAG_AND_DROP_BY
+    public static void dragAndDropActions(WebElement source, int x, int y) {
+        new Actions(driver).dragAndDropBy(source,x,y).perform();
+    }
+
+
 }
