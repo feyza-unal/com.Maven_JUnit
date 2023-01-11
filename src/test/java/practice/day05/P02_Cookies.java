@@ -18,6 +18,7 @@ public class P02_Cookies extends TestBase {
 //      Techproeducation adresine gidiniz
         driver.get("https://www.techproeducation.com");
         waitFor(5);
+
 //      Sayfadaki cookie lerin sayısını yazdırınız
         Set<Cookie> cookies = driver.manage().getCookies();
         System.out.println("Cookie lerin sayısı: " + cookies.size());

@@ -15,7 +15,13 @@ public class P05_BuyukKucukHarf extends TestBase {
 
 //      Büyük küçük harf olucak şekilde HeLlO yazdıralım
         WebElement searchBox = driver.findElement(By.xpath("//*[@class='gLFyf']"));
-        searchBox.sendKeys(Keys.SHIFT,"h",Keys.SHIFT,"e",Keys.SHIFT,"l",Keys.SHIFT,"l",Keys.SHIFT,"o",Keys.SHIFT);
+        searchBox.
+                sendKeys(Keys.SHIFT,"h",
+                        Keys.SHIFT,"e",
+                        Keys.SHIFT,"l",
+                        Keys.SHIFT,"l",
+                        Keys.SHIFT,"o",
+                        Keys.SHIFT);
 
 
     }

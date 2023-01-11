@@ -14,6 +14,7 @@ import java.util.List;
 public class P06_WindowHandle extends TestBase {
     @Test
     public void name() throws InterruptedException {
+
         //https://demoqa.com/ url'ine gidin.
         driver.get("https://demoqa.com/");
 

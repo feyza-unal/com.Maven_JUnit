@@ -39,6 +39,5 @@ public class P03_Actions extends TestBase {/*
         actions.dragAndDrop(sourceBox, targetBox).release().perform();
         Assert.assertEquals("Dropped!",driver.findElement(By.xpath("//*[.='Dropped!']")).getText());
 
-
     }
 }

@@ -18,7 +18,7 @@ public class P04_Actions extends TestBase {
         WebElement fleet = driver.findElement(By.xpath("//*[text()='Fleet']"));
         actions.scrollToElement(fleet).perform();
         fleet.click();
-//Bazi sitelerde elementi gorene kadar kaydirmak gerekiyor
+//--> Bazi sitelerde elementi gorene kadar kaydirmak gerekiyor
 
 //     Sayfa başlığının Fleet içerdiğini test edelim
        switchToWindow(1);//acilan sekmeye gectik
