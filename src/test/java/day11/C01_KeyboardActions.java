@@ -7,7 +7,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import utilities.TestBase;
 
-public class C01_Actions extends TestBase {
+public class C01_KeyboardActions extends TestBase {
     @Test
     public void keyboardActions() {
 
