@@ -34,7 +34,9 @@ Seleniumda tum ekran goruntusu nasil alinir ?
         String currentDate = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
         String path = System.getProperty("user.dir")+"/test-output/EkranGoruntuleri/"+currentDate+"image.png";
         File hedef = new File(path);
+
 //NOTE:screenshot ismine tarihi ekleyerek (date obj ile) dinamik yaptik
+
 //      3. Goruntum ile dosyami birlestirip kaydet
         FileUtils.copyFile(goruntu,hedef);
 

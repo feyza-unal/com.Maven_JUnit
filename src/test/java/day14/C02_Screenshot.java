@@ -20,7 +20,6 @@ public class C02_Screenshot extends TestBase {
         driver.get("https://techproeducation.com/");
 
 //      Sosyal medya elemanlarını goruntusunu al
-
         //1. screenshot al
         WebElement socialMediaIcons = driver.findElement(By.xpath("(//*[@class='elementor-social-icons-wrapper elementor-grid'])[1]"));
         File image = socialMediaIcons.getScreenshotAs(OutputType.FILE);
