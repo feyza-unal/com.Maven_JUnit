@@ -56,7 +56,7 @@ public class C01_ExcelRead {
 //        {{USA, D.C},{FRANCE, PARIS},...}
 //        Variable olusturalim. Bu variable exceldeki country,capital verilerini tutacak
         Map<String,String> ulkeBaskentleri = new HashMap<>();
-        for (int satirSayisi = 1; satirSayisi<kullanilanToplamSatirSayisi; satirSayisi++){
+        for (int satirSayisi = 1; satirSayisi<kullanilanToplamSatirSayisi; satirSayisi++){ //basliklari almak istemedigimiz icin 1'den baslattik
             String country = sheet1.getRow(satirSayisi).getCell(0).toString();
             String capital = sheet1.getRow(satirSayisi).getCell(1).toString();
             ulkeBaskentleri.put(country,capital);
