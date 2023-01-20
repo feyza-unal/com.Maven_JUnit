@@ -38,7 +38,7 @@ public abstract class TestBase { //abstract yapmamizin sebebi bu sinifin objesin
         driver.quit();
     }
 
-//------------------window handle pencere gecisi icin methodlar 1.-----------------
+//---------------------------- WINDOW HANDLE PENCERE GECIS METODLARI-1 ----------------------------------
 //    MULTIPLE WINDOW
 //    1 parametre alir : Gecis Yapmak Istedigim sayfanin Title
 //    ORNEK:
@@ -55,7 +55,7 @@ public abstract class TestBase { //abstract yapmamizin sebebi bu sinifin objesin
         }
         driver.switchTo().window(origin);
     }
-//----------------------- 2. -----------------------------------------
+//-----------------------  WINDOW HANDLE PENCERE GECIS METODLARI-2 -----------------------------------------
 //     windowNumber sıfır (0)'dan başlıyor.
 //     index numarasini parametre olarak alir
 //     ve o indexli pencerece gecis yapar
@@ -65,7 +65,7 @@ public abstract class TestBase { //abstract yapmamizin sebebi bu sinifin objesin
     }
 //yazdigimiz koda gore ilk pencerenin indexi 0, yeni acilan 2. pencrenin indexi 1 dir
 
-//-------------------Thread.sleep() icin method----------------------
+//-------------------Thread.sleep() YERINE KULLANMAK ICIN WAIT METHODU----------------------
  /*   HARD WAIT:
      @param : second
  */
@@ -77,7 +77,7 @@ public abstract class TestBase { //abstract yapmamizin sebebi bu sinifin objesin
         }
     }
 
-//--------------------------actions metodlari--------------------------------------
+//--------------------------ACTIONS METODLARI --------------------------------------
 
     //    ACTIONS_RIGHT CLICK
     public static void rightClickOnElementActions(WebElement element) {
@@ -196,4 +196,37 @@ public abstract class TestBase { //abstract yapmamizin sebebi bu sinifin objesin
         String path = System.getProperty("user.dir")+"/test-output/Screenshots/"+currentTime+"image.png";
         FileUtils.copyFile(image,new File(path));
     }
+//------------------------- JS ILE ELEMENTE KADAR SCROLL ET ---------------------------------------------
+    public void scrollIntoViewJS(WebElement element){ //verilen elementin uzerine kaydirma islemi yapar
+        JavascriptExecutor js = (JavascriptExecutor)driver;
+        js.executeScript("arguments[0].scrollIntoView(true);",element); //arguments[0]-> ilk parametredeki element (dinamik olarak verilen)
+
+    }
+
+//------------------------- SAYFAYI EN USTE / EN ALTA KAYDIR JS ---------------------------------------------
+    public void scrollEndJS(){ //sayfanin en altina in
+        JavascriptExecutor js = (JavascriptExecutor)driver;
+        js.executeScript("window.scrollTo(0,document.body.scrollHeight)");
+    }
+
+    public void scrollTopJS(){ //sayfanin en ustune cik
+        JavascriptExecutor js = (JavascriptExecutor)driver;
+        js.executeScript("window.scrollTo(0,-document.body.scrollHeight)");
+    }
+
+//------------------------- JS ILE ELEMENTE TIKLAMA ---------------------------------------------
+
+    public void clickByJS(WebElement element){
+        JavascriptExecutor js = (JavascriptExecutor)driver;
+        js.executeScript("arguments[0].click();",element);
+
+    }
+
+//------------------------- JS ILE INPUT ELEMENTINE KARAKTER GIRME ---------------------------------------------
+    public void typeWithJS(WebElement element,String text){ //sendKeys methoduna alternatif. sendKeys 1.tercih
+        JavascriptExecutor js = (JavascriptExecutor)driver;
+        js.executeScript("arguments[0].setAttribute('value','"+text+"');",element);
+
+    }
+
 }
