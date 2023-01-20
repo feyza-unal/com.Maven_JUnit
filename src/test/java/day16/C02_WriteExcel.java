@@ -46,17 +46,24 @@ public class C02_WriteExcel {
 }
 /*
 
-Excel Okuma
-Excelden veriyi okumak icin hangi sırayla gitmem gerekir
+--> Excel Okuma
+# Excelden veriyi okumak icin hangi sırayla gitmem gerekir?
 workbook > sheet > row > cell
-Bir exceldeki top satir sayısı nasıl bulunur?
-getLastROwNumber
+
+# Bir exceldeki toplam satir sayısı nasıl bulunur?
+getLastRowNumber
 Yada
 getPhysicalNumberOfRows- toplam kullanılan satir sayısı
-Excel Yazdırma
+
+--> Excel Yazdırma
 Microsoft dosyalari ile iletişime gecmek icin apache poi dependency’s kullanılır
-Su anki projende exceli nasil kullandin?
-Test caselerimde çeşitli datalar kullanıyorum. Ornegin kullanıcı adi, kullanıcı şifresi gibi dataları excelde tutuyoruz. Bu datalari test caselerde kullanmak icin excelden çekiyorum ve test caselerimde kullanıyorum.
-Datalari excelde tutmanı faydası, dataların derli toplu bir yerde olması, data güvenliği, data kayıplarına engel olmak.
+
+# Su anki projende exceli nasil kullandin?
+Test caselerimde çeşitli datalar kullanıyorum. Ornegin kullanıcı adi, kullanıcı şifresi gibi dataları excelde tutuyoruz.
+Bu datalari test caselerde kullanmak icin excelden çekiyorum ve test caselerimde kullanıyorum.
+Datalari excelde tutmanın faydası;
+    -dataların derli toplu bir yerde olması
+    -data güvenliği
+    -data kayıplarına engel olmak.
 
  */
